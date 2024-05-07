@@ -9,6 +9,7 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.financial.client.FinnHubClient;
 import org.financial.domain.StockMarketAction;
 import org.financial.repository.FinancialRepository;
+import org.financial.request.StockMarketActionRequest;
 import org.financial.response.QuoteResponse;
 
 import java.util.List;
@@ -27,14 +28,12 @@ public class FinancialService {
     private FinancialRepository financialRepository;
 
     @Transactional
-    public StockMarketAction createStockMarketAction(String symbol) {
-        QuoteResponse quote = finnHubClient.getQuote(symbol, token);
-
+    public StockMarketAction createStockMarketAction(StockMarketActionRequest request) {
+        QuoteResponse quote = finnHubClient.getQuote(request.getSymbol(), token);
         if (!this.isValidResponse(quote)) {
-            throw new NotFoundException("The action with the symbol " + symbol + " appears to not exist");
+            throw new NotFoundException("The symbol '" + request.getSymbol() + "' appears to not exist");
         }
-
-        StockMarketAction stockMarketAction = this.parseToStockMarketAction(quote, symbol);
+        StockMarketAction stockMarketAction = this.parseToStockMarketAction(quote, request.getSymbol());
         financialRepository.persist(stockMarketAction);
         return stockMarketAction;
     }

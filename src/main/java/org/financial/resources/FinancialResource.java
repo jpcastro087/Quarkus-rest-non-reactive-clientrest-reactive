@@ -5,6 +5,7 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.financial.domain.StockMarketAction;
+import org.financial.request.StockMarketActionRequest;
 import org.financial.response.ErrorResponse;
 import org.financial.services.FinancialService;
 
@@ -18,15 +19,17 @@ public class FinancialResource {
 
     @GET
     @Path("list")
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public List<StockMarketAction> getStockMarketActions() {
         return financialService.getStockMarketActions();
     }
 
     @POST
-    public Response create(String symbol) {
+    @Path("create")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response create(StockMarketActionRequest request) {
         try {
-            StockMarketAction StockMarketAction = financialService.createStockMarketAction(symbol);
+            StockMarketAction StockMarketAction = financialService.createStockMarketAction(request);
             return Response.ok(StockMarketAction).build();
         } catch (NotFoundException e){
             return Response.status(Response.Status.NOT_FOUND)
