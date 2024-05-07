@@ -60,10 +60,9 @@ public class FinancialService {
     }
 
     private boolean isValidResponse(QuoteResponse quoteResponse) {
-        return quoteResponse.getClosePrice() != 0 && quoteResponse.getAbsoluteChange() != 0 &&
-                quoteResponse.getPercentageChange() != 0 && quoteResponse.getHighPrice() != 0 &&
-                quoteResponse.getLowPrice() != 0 && quoteResponse.getOpenPrice() != 0 &&
-                quoteResponse.getPreviousClosePrice() != 0 && quoteResponse.getTimestamp() != 0;
+        return quoteResponse.getClosePrice() > 0 && quoteResponse.getHighPrice() > 0 &&
+                quoteResponse.getLowPrice() > 0 && quoteResponse.getOpenPrice() > 0 &&
+                quoteResponse.getPreviousClosePrice() > 0 && quoteResponse.getTimestamp() > 0;
     }
 
 
