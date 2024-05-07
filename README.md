@@ -6,6 +6,14 @@ This project provides a simple API to store and retrieve stock price data. It al
 
 The application requires JDK 21 to run.
 
+## Downloading the Project
+
+To download the project, use:
+```shell script
+git clone https://github.com/jpcastro087/quarkus-financial.git
+cd quarkus-financial
+```
+
 ## Compiling, Packaging, and Running the Application
 
 To compile, package, and start the application in development mode for live coding, use:
