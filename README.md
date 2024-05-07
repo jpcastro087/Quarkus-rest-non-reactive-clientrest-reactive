@@ -102,3 +102,12 @@ If the symbol is not found, no data is stored and the following response is retu
 ]
 ```
 
+## Test Scenarios
+
+1. **testCreateValidSymbol**: This test scenario verifies that when a valid symbol is provided to the `/stock/create` endpoint, the application successfully stores the stock data and returns a status code of 200.
+   
+2. **testCreateSymbolNotFound**: This test scenario verifies that when an invalid symbol is provided to the `/stock/create` endpoint, the application returns a status code of 404, indicating that the symbol was not found.
+
+3. **testGetStockMarketActions**: This test scenario verifies that the `/stock/list` endpoint returns a list of stock market actions when called. It checks that the response status code is OK (200).
+
+
