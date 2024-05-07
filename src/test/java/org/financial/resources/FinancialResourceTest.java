@@ -3,6 +3,7 @@ package org.financial.resources;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.given;
 
 @QuarkusTest
@@ -10,10 +11,10 @@ public class FinancialResourceTest {
     @Test
     public void testCreateValidSymbol() {
         given()
-                .contentType("text/plain")
-                .body("AAPL")
+                .contentType("application/json")
+                .body("{\"symbol\":\"AAPL\"}")
                 .when()
-                .post("/stock")
+                .post("/stock/create")
                 .then()
                 .statusCode(200);
     }
@@ -21,10 +22,10 @@ public class FinancialResourceTest {
     @Test
     public void testCreateSymbolNotFound() {
         given()
-                .contentType("text/plain")
-                .body("INVALID")
+                .contentType("application/json")
+                .body("{\"symbol\":\"INVALID\"}")
                 .when()
-                .post("/stock")
+                .post("/stock/create")
                 .then()
                 .statusCode(404);
     }
@@ -32,6 +33,7 @@ public class FinancialResourceTest {
     @Test
     public void testGetStockMarketActions() {
         given()
+                .contentType("application/json")
                 .when()
                 .get("/stock/list")
                 .then()
