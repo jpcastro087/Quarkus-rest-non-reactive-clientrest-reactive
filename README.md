@@ -56,7 +56,7 @@ If the symbol is found, data is stored in an H2 database and a response with the
 If the symbol is not found, no data is stored and the following response is returned:
 ```json
 {
-  "error_message": "The symbol 'PEPE' appears to not exist"
+  "error_message": "The symbol 'APPLE' appears to not exist"
 }
 ```
 
