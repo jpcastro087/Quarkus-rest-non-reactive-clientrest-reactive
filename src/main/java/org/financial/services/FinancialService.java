@@ -47,7 +47,7 @@ public class FinancialService {
 
     private StockMarketAction parseToStockMarketAction(QuoteResponse quoteResponse, String symbol) {
         StockMarketAction stockMarketAction = new StockMarketAction();
-        stockMarketAction.setSymbol(symbol);
+        stockMarketAction.setSymbol(symbol.toUpperCase());
         stockMarketAction.setClosePrice(quoteResponse.getClosePrice());
         stockMarketAction.setAbsoluteChange(quoteResponse.getAbsoluteChange());
         stockMarketAction.setPercentageChange(quoteResponse.getPercentageChange());
