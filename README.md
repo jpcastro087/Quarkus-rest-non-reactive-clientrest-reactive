@@ -1,12 +1,12 @@
 # Quarkus Financial
 
-This project provides a simple API to store and retrieve stock price data. It allows users to store stock prices by symbol and retrieve a list of stored stock data.
+This project made with Quarkus and OpenJdk21, provides a simple API to store and retrieve stock price data. It allows users to store stock prices by symbol and retrieve a list of stored stock data.
 
 ### System Requirements
 
 - Requires <b>JDK 21</b> installed in your OS to compile.
-- Requires <b>Maven installed</b> installed in your OS to compile.
-- Requires <b>Docker installed</b> on your operating system.
+- Requires <b>Maven installed</b> in your OS to compile.
+- Requires <b>Docker installed</b> and working in your operating system.
 
 ### Downloading the Project
 
