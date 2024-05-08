@@ -48,7 +48,7 @@ $ docker run -i --rm -p 8080:8080 quarkus/quarkus-financial-jvm
 
 ### URL Swagger Interface
 
-Once applications is up you can access to tests the functionallity on:
+Once the application is up you can access to tests the functionallity on:
 ```shell script
 http://localhost:8080/q/swagger/
 ```
@@ -133,6 +133,6 @@ If the symbol is not found, no data is stored and the following response is retu
    
 2. **testCreateSymbolNotFound**: This test scenario verifies that when an invalid symbol is provided to the `/stock/create` endpoint, the application returns a status code of 404, indicating that the symbol was not found.
 
-3. **testGetStockMarketActions**: This test scenario verifies that the `/stock/list` endpoint returns a list of stock market actions when called. It checks that the response status code is OK (200).
+3. **testGetStockMarketActions**: This test scenario verifies that the `/stock/list` endpoint returns a list of stock market actions when called. It checks that the response status code is always OK (200).
 
 
