@@ -10,9 +10,9 @@ This project provides a simple API to store and retrieve stock price data. It al
 
 ### Downloading the Project
 
-To download the project, use:<br>
+To download the project, use:
 ```shell script
-  $ git clone https://github.com/jpcastro087/quarkus-financial.git<br>
+  $ git clone https://github.com/jpcastro087/quarkus-financial.git
   $ cd quarkus-financial
 ```
 
