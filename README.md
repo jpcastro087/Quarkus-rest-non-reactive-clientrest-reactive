@@ -7,6 +7,7 @@ This project made with Quarkus and OpenJdk21, provides a simple API to store and
 - Requires <b>JDK 21</b> installed in your OS to compile.
 - Requires <b>Maven installed</b> in your OS to compile.
 - Requires <b>Docker installed</b> and working in your operating system.
+- Requires <b>Git installed</b> in your operating system.
 
 ### Downloading the Project
 
