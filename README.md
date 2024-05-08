@@ -55,7 +55,7 @@ http://localhost:8080/q/swagger/
 
 ### Endpoints
 
-After the application is running, endpoints can be tested via Swagger UI at `localhost:8080/q/swagger`.
+After the application is running, endpoints can be tested via Swagger UI at `http://localhost:8080/q/swagger`.
 
 - `/stock/create` (POST): This endpoint requires a JSON body with the following structure:
 ```json
