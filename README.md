@@ -4,13 +4,13 @@ This project provides a simple API to store and retrieve stock price data. It al
 
 ### System Requirements
 
-- Requires <b>JDK 21</b> to compile.
-- Requires <b>Maven installed</b> to compile.
+- Requires <b>JDK 21</b> installed in your OS to compile.
+- Requires <b>Maven installed</b> installed in your OS to compile.
 - Requires <b>Docker installed</b> on your operating system.
 
 ### Downloading the Project
 
-To download the project, use:
+To download the project and accessing to the working directory, use:
 ```shell script
   $ git clone https://github.com/jpcastro087/quarkus-financial.git
   $ cd quarkus-financial
