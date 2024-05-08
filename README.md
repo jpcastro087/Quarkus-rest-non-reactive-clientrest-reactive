@@ -14,6 +14,8 @@ This project made with Quarkus and OpenJdk21, provides a simple API to store and
 To download the project and accessing to the working directory, use:
 ```shell script
   $ git clone https://github.com/jpcastro087/quarkus-financial.git
+```
+```shell script
   $ cd quarkus-financial
 ```
 
