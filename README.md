@@ -31,13 +31,11 @@ In order to be able to run the application independently of the operating system
 ```shell script
 $ docker build -f src/main/docker/Dockerfile.jvm -t quarkus/quarkus-financial-jvm .
 ```
-
-### Building Image with Docker (Windows)
-
-Build Image in windows with \
+If you are on Windows is:
 ```shell script
-docker build -f src\main\docker\Dockerfile.jvm -t quarkus/quarkus-financial-jvm .
+$ docker build -f src\main\docker\Dockerfile.jvm -t quarkus/quarkus-financial-jvm .
 ```
+
 
 ### Running Image created with Docker
 
