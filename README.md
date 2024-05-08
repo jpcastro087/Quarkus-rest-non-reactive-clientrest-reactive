@@ -42,7 +42,7 @@ docker build -f src\main\docker\Dockerfile.jvm -t quarkus/quarkus-financial-jvm 
 
 Now we indicate that we want to run the image we created earlier, and then we will have the application deployed at http://localhost:8080
 ```shell script
-docker run -i --rm -p 8080:8080 quarkus/quarkus-financial-jvm
+$ docker run -i --rm -p 8080:8080 quarkus/quarkus-financial-jvm
 ```
 
 ### URL Swagger Interface
