@@ -127,7 +127,7 @@ If the symbol is not found, no data is stored and the following response is retu
 ]
 ```
 
-### Test Scenarios
+### Scenarios covered with @QuarkusTest
 
 1. **testCreateValidSymbol**: This test scenario verifies that when a valid symbol is provided to the `/stock/create` endpoint, the application successfully stores the stock data and returns a status code of 200.
    
