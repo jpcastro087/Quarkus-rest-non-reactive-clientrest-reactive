@@ -1,56 +1,58 @@
-# quarkus-financial
+# Quarkus Financial
 
 This project provides a simple API to store and retrieve stock price data. It allows users to store stock prices by symbol and retrieve a list of stored stock data.
 
-## System Requirements
+### System Requirements
 
-Requires <b>JDK 21</b> to compile.
-Requires <b>Docker installed</b> on your operating system."
+- Requires <b>JDK 21</b> to compile.
+- Requires <b>Maven installed</b> to compile.
+- Requires <b>Docker installed</b> on your operating system.
 
-## Downloading the Project
+### Downloading the Project
 
-To download the project, use:
+To download the project, use:<br>
 ```shell script
-git clone https://github.com/jpcastro087/quarkus-financial.git
-cd quarkus-financial
+  $ git clone https://github.com/jpcastro087/quarkus-financial.git<br>
+  $ cd quarkus-financial
 ```
 
-## Compiling and Test <b>Linux/Mac</b> 
+### Package and Testing
 
-To compile, package, and start the application in development mode for live coding, use:
+First, we need to package and test the application.:
+
 ```shell script
-./mvnw package
+$ mvn clean install
 ```
 
-## Compiling and Test <b>Windows</b>
-
-To compile, package, and start the application in development mode for live coding, use:
-```shell script
-mvnw package
-```
-
-## Building Image with Docker
+### Building Image with Docker
 
 In order to be able to run the application independently of the operating system we are on, we will create an image of it with Docker.
-```
-docker build -f src/main/docker/Dockerfile.jvm -t quarkus/quarkus-financial-jvm .
+```shell script
+$ docker build -f src/main/docker/Dockerfile.jvm -t quarkus/quarkus-financial-jvm .
 ```
 
-## Running Image created with Docker
+### Building Image with Docker (Windows)
+
+Build Image in windows with \
+```shell script
+docker build -f src\main\docker\Dockerfile.jvm -t quarkus/quarkus-financial-jvm .
+```
+
+### Running Image created with Docker
 
 Now we indicate that we want to run the image we created earlier, and then we will have the application deployed at http://localhost:8080
-```
+```shell script
 docker run -i --rm -p 8080:8080 quarkus/quarkus-financial-jvm
 ```
 
-## URL Swagger Interface
+### URL Swagger Interface
 
 Once applications is up you can access to tests the functionallity on:
 ```shell script
 http://localhost:8080/q/swagger/
 ```
 
-## Endpoints
+### Endpoints
 
 After the application is running, endpoints can be tested via Swagger UI at `localhost:8080/q/swagger`.
 
@@ -124,7 +126,7 @@ If the symbol is not found, no data is stored and the following response is retu
 ]
 ```
 
-## Test Scenarios
+### Test Scenarios
 
 1. **testCreateValidSymbol**: This test scenario verifies that when a valid symbol is provided to the `/stock/create` endpoint, the application successfully stores the stock data and returns a status code of 200.
    
