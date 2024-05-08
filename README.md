@@ -21,6 +21,12 @@ To compile, package, and start the application in development mode for live codi
 ./mvnw compile quarkus:dev
 ```
 
+## URL Swagger Interface
+
+Once applications is up you can access to tests the functionallity on:
+```shell script
+http://localhost:8080/q/swaggerui/
+```
 ## Testing
 
 Run tests with:
