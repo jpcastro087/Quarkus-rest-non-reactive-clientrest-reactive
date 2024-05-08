@@ -4,7 +4,8 @@ This project provides a simple API to store and retrieve stock price data. It al
 
 ## System Requirements
 
-The application requires JDK 21 to run.
+Requires <b>JDK 21</b> to compile.
+Requires <b>Docker installed</b> on your operating system."
 
 ## Downloading the Project
 
@@ -14,29 +15,44 @@ git clone https://github.com/jpcastro087/quarkus-financial.git
 cd quarkus-financial
 ```
 
-## Compiling, Packaging, and Running the Application
+## Compiling and Test <b>Linux/Mac</b> 
 
 To compile, package, and start the application in development mode for live coding, use:
 ```shell script
-./mvnw compile quarkus:dev
+./mvnw package
+```
+
+## Compiling and Test <b>Windows</b>
+
+To compile, package, and start the application in development mode for live coding, use:
+```shell script
+mvnw package
+```
+
+## Building Image with Docker
+
+In order to be able to run the application independently of the operating system we are on, we will create an image of it with Docker.
+```
+docker build -f src/main/docker/Dockerfile.jvm -t quarkus/quarkus-financial-jvm .
+```
+
+## Running Image created with Docker
+
+Now we indicate that we want to run the image we created earlier, and then we will have the application deployed at http://localhost:8080
+```
+docker run -i --rm -p 8080:8080 quarkus/quarkus-financial-jvm
 ```
 
 ## URL Swagger Interface
 
 Once applications is up you can access to tests the functionallity on:
 ```shell script
-http://localhost:8080/q/swaggerui/
-```
-## Testing
-
-Run tests with:
-```shell script
-./mvnw test
+http://localhost:8080/q/swagger/
 ```
 
 ## Endpoints
 
-After the application is running, endpoints can be tested via Swagger UI at `localhost:8080/q/swaggerui`.
+After the application is running, endpoints can be tested via Swagger UI at `localhost:8080/q/swagger`.
 
 - `/stock/create` (POST): This endpoint requires a JSON body with the following structure:
 ```json
